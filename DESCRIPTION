@@ -11,3 +11,4 @@ Description: Convenient way to make binaries such as plink, bcftools etc availab
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1
