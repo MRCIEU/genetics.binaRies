@@ -10,6 +10,7 @@ get_bcftools_binary <- function()
 		Darwin = { system.file("bin", "bcftools_darwin", package="genetics.binaRies") })
 }
 
+
 #' Find binary for plink
 #'
 #' @export
@@ -20,4 +21,18 @@ get_plink_binary <- function()
 		Windows = { system.file("bin", "plink.exe", package="genetics.binaRies") },
 		Linux = { system.file("bin", "plink_Linux", package="genetics.binaRies") },
 		Darwin = { system.file("bin", "plink_Darwin", package="genetics.binaRies") })
+}
+
+
+#' Find binary for gcta
+#'
+#'
+#' @export
+#' @return path to gcta
+get_gcta_binary <- function()
+{
+	switch(Sys.info()[['sysname']],
+		Windows = { system.file("bin", "gcta.exe", package="genetics.binaRies") },
+		Linux = { system.file("bin", "gcta_Linux", package="genetics.binaRies") },
+		Darwin = { system.file("bin", "gcta_Darwin", package="genetics.binaRies") })
 }
