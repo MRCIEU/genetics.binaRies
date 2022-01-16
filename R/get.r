@@ -1,5 +1,7 @@
 #' Find binary for bcftools
 #'
+#' @examples 
+#' get_bcftools_binary()
 #' @export
 #' @return Path to bcftools
 get_bcftools_binary <- function()
@@ -17,6 +19,8 @@ get_bcftools_binary <- function()
 
 #' Find binary for plink
 #'
+#' @examples 
+#' get_plink_binary()
 #' @export
 #' @return Path to plink
 get_plink_binary <- function()
@@ -30,6 +34,8 @@ get_plink_binary <- function()
 
 #' Find binary for gcta
 #'
+#' @examples 
+#' get_gcta_binary()
 #' @export
 #' @return path to gcta
 get_gcta_binary <- function()
