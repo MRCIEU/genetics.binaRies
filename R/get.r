@@ -5,7 +5,10 @@
 get_bcftools_binary <- function()
 {
 	switch(Sys.info()[['sysname']],
-		Windows = { stop("Sorry, bcftools binary is not available for Windows at the moment. Use the other native functions for querying, or for faster speeds use this package on Mac or Linux")},
+		Windows = { 
+		  stop("Sorry, bcftools binary is not available for Windows at the moment.",
+		  " Use the other native functions for querying, ",
+		  "or for faster speeds use this package on Mac or Linux")},
 		Linux = { system.file("bin", "bcftools_linux", package="genetics.binaRies") },
 		Darwin = { system.file("bin", "bcftools_darwin", package="genetics.binaRies") })
 }
