@@ -8,4 +8,5 @@ Description: Convenient way to make binaries such as plink, bcftools etc
     available to other packages
 License: MIT + file LICENSE
 Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
