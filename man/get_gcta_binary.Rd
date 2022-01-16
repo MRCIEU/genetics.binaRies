@@ -12,3 +12,6 @@ path to gcta
 \description{
 Find binary for gcta
 }
+\examples{
+get_gcta_binary()
+}

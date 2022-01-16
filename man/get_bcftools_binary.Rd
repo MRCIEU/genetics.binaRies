@@ -12,3 +12,6 @@ Path to bcftools
 \description{
 Find binary for bcftools
 }
+\examples{
+get_bcftools_binary()
+}

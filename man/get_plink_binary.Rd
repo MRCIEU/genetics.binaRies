@@ -12,3 +12,6 @@ Path to plink
 \description{
 Find binary for plink
 }
+\examples{
+get_plink_binary()
+}
