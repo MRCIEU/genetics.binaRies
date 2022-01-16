@@ -10,7 +10,8 @@ get_bcftools_binary <- function()
 		  " Use the other native functions for querying, ",
 		  "or for faster speeds use this package on Mac or Linux")},
 		Linux = { system.file("bin", "bcftools_linux", package="genetics.binaRies") },
-		Darwin = { system.file("bin", "bcftools_darwin", package="genetics.binaRies") })
+		Darwin = { system.file("bin", "bcftools_darwin", 
+		                       package="genetics.binaRies") })
 }
 
 
