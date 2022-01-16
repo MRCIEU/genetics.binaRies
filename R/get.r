@@ -29,7 +29,6 @@ get_plink_binary <- function()
 
 #' Find binary for gcta
 #'
-#'
 #' @export
 #' @return path to gcta
 get_gcta_binary <- function()
