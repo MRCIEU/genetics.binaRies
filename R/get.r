@@ -1,3 +1,18 @@
+# Create bin folder in package and download specified executable into it
+#' @importFrom utils download.file
+downloader <- function(url, exename) {
+  dest <- file.path(system.file(package = "genetics.binaRies"), "bin")
+  if (!dir.exists(dest)) dir.create(dest)
+  destfile <- file.path(dest, exename)
+  download.file(url = url, destfile = destfile)  
+}
+
+# Prefix of URL where binaries are on Gib's GitHub
+blobprefix <- paste0("https://github.com/explodecomputer/",
+                     "genetics.binaRies/blob/",
+                     "383764855a4346442a054388c35dfe5ad580bfc8/inst/bin/")
+# https://github.com/explodecomputer/genetics.binaRies/blob/master/binaries/
+
 #' Find binary for bcftools
 #'
 #' @examples 
@@ -11,9 +26,14 @@ get_bcftools_binary <- function()
 		  stop("Sorry, bcftools binary is not available for Windows at the moment.",
 		  " Use the other native functions for querying, ",
 		  "or for faster speeds use this package on Mac or Linux")},
-		Linux = { system.file("bin", "bcftools_linux", package="genetics.binaRies") },
-		Darwin = { system.file("bin", "bcftools_darwin", 
-		                       package="genetics.binaRies") })
+		Linux = { 
+		  url <- paste0(blobprefix, "bcftools_linux")
+		  downloader(url, "bcftools_linux")
+		},
+		Darwin = { 
+		  url <- paste0(blobprefix, "bcftools_darwin")
+		  downloader(url, "bcftools_darwin")
+		})
 }
 
 
@@ -26,9 +46,18 @@ get_bcftools_binary <- function()
 get_plink_binary <- function()
 {
 	switch(Sys.info()[['sysname']],
-		Windows = { system.file("bin", "plink.exe", package="genetics.binaRies") },
-		Linux = { system.file("bin", "plink_Linux", package="genetics.binaRies") },
-		Darwin = { system.file("bin", "plink_Darwin", package="genetics.binaRies") })
+		Windows = { 
+		  url <- paste0(blobprefix, "plink.exe")
+		  downloader(url, "plink.exe")
+		},
+		Linux = {
+		  url <- paste0(blobprefix, "plink_Linux")
+		  downloader(url, "plink_Linux")		  
+		},
+		Darwin = {
+		  url <- paste0(blobprefix, "plink_Darwin")
+		  downloader(url, "plink_Darwin")
+		})
 }
 
 
@@ -41,7 +70,16 @@ get_plink_binary <- function()
 get_gcta_binary <- function()
 {
 	switch(Sys.info()[['sysname']],
-		Windows = { system.file("bin", "gcta.exe", package="genetics.binaRies") },
-		Linux = { system.file("bin", "gcta_Linux", package="genetics.binaRies") },
-		Darwin = { system.file("bin", "gcta_Darwin", package="genetics.binaRies") })
+		Windows = { 
+		  url <- paste0(blobprefix, "gcta.exe")
+		  downloader(url, "gcta.exe")
+		},
+		Linux = { 
+		  url <- paste0(blobprefix, "gcta_Linux")
+		  downloader(url, "gcta_Linux")
+		},
+		Darwin = { 
+		  url <- paste0(blobprefix, "gcta_Darwin")
+		  downloader(url, "gcta_Darwin")
+		})
 }
