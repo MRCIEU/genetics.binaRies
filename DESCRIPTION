@@ -1,5 +1,5 @@
 Package: genetics.binaRies
-Title: Binaries for tools used in genetics in an R package
+Title: Binaries for Tools Used in Genetics in an R Package
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Gibran",
