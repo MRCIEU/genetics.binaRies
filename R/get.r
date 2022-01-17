@@ -41,8 +41,8 @@ downloader <- function(exename) {
 
 #' Find binary for bcftools
 #'
-#' @examples 
-#' get_bcftools_binary()
+#' @examples
+#' if (Sys.info()[["sysname"]] != "Windows") get_bcftools_binary()
 #' @export
 #' @return Path to bcftools
 get_bcftools_binary <- function()
