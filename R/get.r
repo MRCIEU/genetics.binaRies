@@ -1,18 +1,44 @@
-# Create bin folder in package and download specified executable into it
+# Prefix of URL where binaries currently are on Gib's GitHub
+# urlprefix1 <- paste0("https://github.com/explodecomputer/",
+#                      "genetics.binaRies/blob/",
+#                      "383764855a4346442a054388c35dfe5ad580bfc8/inst/bin/")
+# Prefix of URL where binaries will be
+urlprefix2 <- paste0("https://github.com/remlapmot/genetics.binaRies/", 
+                     "raw/cran-fixes-01-2022/binaries/")
+urlprefix1 <- paste0("https://github.com/explodecomputer/genetics.binaRies/", 
+                     "raw/master/binaries/")
+urlprefix3 <- paste0("https://github.com/remlapmot/genetics.binaRies/", 
+                     "raw/master/binaries/")
+urlprefix <- list(urlprefix1, urlprefix2, urlprefix3)
+
+# function to test for a try error
+is.error <- function(x) inherits(x, "try-error")
+
 #' @importFrom utils download.file
-downloader <- function(url, exename) {
+downloader <- function(exename) {
+  os <- Sys.info()[["sysname"]]
+
   dest <- file.path(system.file(package = "genetics.binaRies"), "bin")
+  # Create bin folder in package and download specified executable into it - 
+  # looping over the 4 possible URLs
   if (!dir.exists(dest)) dir.create(dest)
   destfile <- file.path(dest, exename)
-  if (!file.exists(destfile)) download.file(url = url, destfile = destfile)
+  if (!file.exists(destfile)) {
+    download_success <- FALSE
+    i <- 1L
+    while (isFALSE(download_success)) {
+      cat("\n")
+      if (i > length(urlprefix)) {
+        stop(exename, " not found at all ", length(urlprefix), " URLs.")
+      }
+      fullurl <- paste0(urlprefix[[i]], os, "/", exename)
+      err <- try(download.file(url = fullurl, destfile = destfile))
+      if (!is.error(err)) download_success <- TRUE
+      i <- i + 1L
+    }
+  }
   destfile
 }
-
-# Prefix of URL where binaries are on Gib's GitHub
-blobprefix <- paste0("https://github.com/explodecomputer/",
-                     "genetics.binaRies/blob/",
-                     "383764855a4346442a054388c35dfe5ad580bfc8/inst/bin/")
-# https://github.com/explodecomputer/genetics.binaRies/blob/master/binaries/
 
 #' Find binary for bcftools
 #'
@@ -28,12 +54,10 @@ get_bcftools_binary <- function()
 		  " Use the other native functions for querying, ",
 		  "or for faster speeds use this package on Mac or Linux")},
 		Linux = { 
-		  url <- paste0(blobprefix, "bcftools_linux")
-		  downloader(url, "bcftools_linux")
+		  downloader("bcftools")
 		},
 		Darwin = { 
-		  url <- paste0(blobprefix, "bcftools_darwin")
-		  downloader(url, "bcftools_darwin")
+		  downloader("bcftools")
 		})
 }
 
@@ -48,16 +72,13 @@ get_plink_binary <- function()
 {
 	switch(Sys.info()[['sysname']],
 		Windows = { 
-		  url <- paste0(blobprefix, "plink.exe")
-		  downloader(url, "plink.exe")
+		  downloader("plink.exe")
 		},
 		Linux = {
-		  url <- paste0(blobprefix, "plink_Linux")
-		  downloader(url, "plink_Linux")		  
+		  downloader("plink")  
 		},
 		Darwin = {
-		  url <- paste0(blobprefix, "plink_Darwin")
-		  downloader(url, "plink_Darwin")
+		  downloader("plink")
 		})
 }
 
@@ -72,15 +93,12 @@ get_gcta_binary <- function()
 {
 	switch(Sys.info()[['sysname']],
 		Windows = { 
-		  url <- paste0(blobprefix, "gcta.exe")
-		  downloader(url, "gcta.exe")
+		  downloader("gcta.exe")
 		},
 		Linux = { 
-		  url <- paste0(blobprefix, "gcta_Linux")
-		  downloader(url, "gcta_Linux")
+		  downloader("gcta")
 		},
 		Darwin = { 
-		  url <- paste0(blobprefix, "gcta_Darwin")
-		  downloader(url, "gcta_Darwin")
+		  downloader("gcta")
 		})
 }
