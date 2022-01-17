@@ -3,11 +3,11 @@
 #                      "genetics.binaRies/blob/",
 #                      "383764855a4346442a054388c35dfe5ad580bfc8/inst/bin/")
 # Prefix of URL where binaries will be
-urlprefix2 <- paste0("https://github.com/remlapmot/genetics.binaRies/", 
+urlprefix2 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
                      "raw/cran-fixes-01-2022/binaries/")
-urlprefix1 <- paste0("https://github.com/explodecomputer/genetics.binaRies/", 
+urlprefix1 <- paste0("https://github.com/explodecomputer/genetics.binaRies/",
                      "raw/master/binaries/")
-urlprefix3 <- paste0("https://github.com/remlapmot/genetics.binaRies/", 
+urlprefix3 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
                      "raw/master/binaries/")
 urlprefix <- list(urlprefix1, urlprefix2, urlprefix3)
 
@@ -18,7 +18,7 @@ is.error <- function(x) inherits(x, "try-error")
 downloader <- function(exename) {
   os <- Sys.info()[["sysname"]]
   dest <- file.path(system.file(package = "genetics.binaRies"), "bin")
-  # Create bin folder in package and download specified executable into it - 
+  # Create bin folder in package and download specified executable into it -
   # looping over the 4 possible URLs
   if (!dir.exists(dest)) dir.create(dest)
   destfile <- file.path(dest, exename)
@@ -47,57 +47,57 @@ downloader <- function(exename) {
 #' @return Path to bcftools
 get_bcftools_binary <- function()
 {
-	switch(Sys.info()[['sysname']],
-		Windows = { 
-		  stop("Sorry, bcftools binary is not available for Windows at the moment.",
-		  " Use the other native functions for querying, ",
-		  "or for faster speeds use this package on Mac or Linux")},
-		Linux = { 
-		  downloader("bcftools")
-		},
-		Darwin = { 
-		  downloader("bcftools")
-		})
+    switch(Sys.info()[['sysname']],
+        Windows = {
+          stop("Sorry, bcftools binary is not available for Windows at the moment.",
+          " Use the other native functions for querying, ",
+          "or for faster speeds use this package on Mac or Linux")},
+        Linux = {
+          downloader("bcftools")
+        },
+        Darwin = {
+          downloader("bcftools")
+        })
 }
 
 
 #' Find binary for plink
 #'
-#' @examples 
+#' @examples
 #' get_plink_binary()
 #' @export
 #' @return Path to plink
 get_plink_binary <- function()
 {
-	switch(Sys.info()[['sysname']],
-		Windows = { 
-		  downloader("plink.exe")
-		},
-		Linux = {
-		  downloader("plink")  
-		},
-		Darwin = {
-		  downloader("plink")
-		})
+    switch(Sys.info()[['sysname']],
+        Windows = {
+          downloader("plink.exe")
+        },
+        Linux = {
+          downloader("plink")
+        },
+        Darwin = {
+          downloader("plink")
+        })
 }
 
 
 #' Find binary for gcta
 #'
-#' @examples 
+#' @examples
 #' get_gcta_binary()
 #' @export
 #' @return path to gcta
 get_gcta_binary <- function()
 {
-	switch(Sys.info()[['sysname']],
-		Windows = { 
-		  downloader("gcta.exe")
-		},
-		Linux = { 
-		  downloader("gcta")
-		},
-		Darwin = { 
-		  downloader("gcta")
-		})
+    switch(Sys.info()[['sysname']],
+        Windows = {
+          downloader("gcta.exe")
+        },
+        Linux = {
+          downloader("gcta")
+        },
+        Darwin = {
+          downloader("gcta")
+        })
 }
