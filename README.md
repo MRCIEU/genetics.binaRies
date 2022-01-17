@@ -1,6 +1,7 @@
 # genetics.binaRies
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/explodecomputer/genetics.binaRies/workflows/R-CMD-check/badge.svg)](https://github.com/explodecomputer/genetics.binaRies/actions)
 <!-- badges: end -->
 
 The goal of genetics.binaRies is to ...
