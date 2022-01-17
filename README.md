@@ -4,7 +4,9 @@
 [![R-CMD-check](https://github.com/explodecomputer/genetics.binaRies/workflows/R-CMD-check/badge.svg)](https://github.com/explodecomputer/genetics.binaRies/actions)
 <!-- badges: end -->
 
-The goal of genetics.binaRies is to ...
+The goal of genetics.binaRies is to provide a convenient way to make binaries 
+such as `plink`, `bcftools`, and `gcta` available to other packages in the 
+MRC IEU OpenGWAS system.
 
 ## Installation
 
