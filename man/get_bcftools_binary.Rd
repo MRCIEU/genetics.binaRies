@@ -13,5 +13,5 @@ Path to bcftools
 Find binary for bcftools
 }
 \examples{
-get_bcftools_binary()
+if (Sys.info()[["sysname"]] != "Windows") get_bcftools_binary()
 }
