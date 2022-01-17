@@ -17,7 +17,6 @@ is.error <- function(x) inherits(x, "try-error")
 #' @importFrom utils download.file
 downloader <- function(exename) {
   os <- Sys.info()[["sysname"]]
-
   dest <- file.path(system.file(package = "genetics.binaRies"), "bin")
   # Create bin folder in package and download specified executable into it - 
   # looping over the 4 possible URLs
