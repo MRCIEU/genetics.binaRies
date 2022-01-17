@@ -14,5 +14,6 @@ You can install the development version of **genetics.binaRies** from GitHub
 with:
 
 ``` r
-devtools::install_github("explodecomputer/genetics.binaRies")
+if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
+remotes::install_github("explodecomputer/genetics.binaRies")
 ```
