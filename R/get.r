@@ -4,7 +4,8 @@ downloader <- function(url, exename) {
   dest <- file.path(system.file(package = "genetics.binaRies"), "bin")
   if (!dir.exists(dest)) dir.create(dest)
   destfile <- file.path(dest, exename)
-  download.file(url = url, destfile = destfile)  
+  if (!file.exists(destfile)) download.file(url = url, destfile = destfile)
+  destfile
 }
 
 # Prefix of URL where binaries are on Gib's GitHub
