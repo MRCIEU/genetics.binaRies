@@ -10,7 +10,8 @@ urlprefix3 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
                      "raw/master/binaries/")
 urlprefix <- list(urlprefix1, urlprefix2, urlprefix3)
 
-# function to test for a try error
+# Function to test for a try() error
+# from http://adv-r.had.co.nz/Exceptions-Debugging.html
 is.error <- function(x) inherits(x, "try-error")
 
 #' @importFrom utils download.file
