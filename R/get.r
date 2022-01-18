@@ -1,12 +1,11 @@
-# Prefix of URL where binaries currently are on Gib's GitHub
-# urlprefix1 <- paste0("https://github.com/explodecomputer/",
-#                      "genetics.binaRies/blob/",
-#                      "383764855a4346442a054388c35dfe5ad580bfc8/inst/bin/")
-# Prefix of URL where binaries will be
-urlprefix2 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
-                     "raw/cran-fixes-01-2022/binaries/")
+# Prefix of URL where executables are available from
+# i.e. - once PR accepted they'll be on Gib's master branch,
+# - until the PR branch on my fork
+# - include my fork mater branch as a fall back
 urlprefix1 <- paste0("https://github.com/explodecomputer/genetics.binaRies/",
                      "raw/master/binaries/")
+urlprefix2 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
+                     "raw/cran-fixes-01-2022/binaries/")
 urlprefix3 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
                      "raw/master/binaries/")
 urlprefix <- list(urlprefix1, urlprefix2, urlprefix3)
