@@ -14,6 +14,7 @@ urlprefix <- list(urlprefix1, urlprefix2, urlprefix3)
 # from http://adv-r.had.co.nz/Exceptions-Debugging.html
 is.error <- function(x) inherits(x, "try-error")
 
+# Function to check for and download executables
 #' @importFrom utils download.file
 downloader <- function(exename) {
   os <- Sys.info()[["sysname"]]
