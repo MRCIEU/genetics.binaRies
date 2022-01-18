@@ -1,7 +1,7 @@
 # Prefix of URL where executables are available from
 # i.e. - once PR accepted they'll be on Gib's master branch,
-# - until the PR branch on my fork
-# - include my fork mater branch as a fall back
+# - until PR accepted they are on PR branch of my fork
+# - include my fork master branch as a fall back
 urlprefix1 <- paste0("https://github.com/explodecomputer/genetics.binaRies/",
                      "raw/master/binaries/")
 urlprefix2 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
