@@ -1,14 +1,23 @@
 Package: genetics.binaRies
-Title: Binaries for tools used in genetics in an R package
+Title: Binaries for Tools Used in Genetics in an R Package
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Gibran",
-           family = "Hemani",
-           role = c("aut", "cre"),
-           email = "g.hemani@bristol.ac.uk",
-           comment = c(ORCID = "0000-0003-0920-1055"))
-Description: Convenient way to make binaries such as plink, bcftools etc available to other packages
+    c(person("Gibran", "Hemani", , "g.hemani@bristol.ac.uk", role = c("aut", "cre"),
+             comment = c(ORCID = "0000-0003-0920-1055")),
+      person("Tom", "Palmer", , "remlapmot@hotmail.com", role = "aut",
+             comment = c(ORCID = "0000-0003-4655-4511")))
+Description: A convenient way to make binaries such as plink, bcftools,
+    and others available to other packages. This package forms part of the
+    MRC IEU OpenGWAS system. The system includes other R packages,
+    including; gwasglue, ieugwasr, gwasvcf, and TwoSampleMR.
 License: MIT + file LICENSE
+URL: https://github.com/explodecomputer/genetics.binaRies
+BugReports: https://github.com/explodecomputer/genetics.binaRies/issues
+Imports:
+    utils
+Suggests:
+    testthat (>= 3.0.0)
 Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.1.0
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Config/testthat/edition: 3
