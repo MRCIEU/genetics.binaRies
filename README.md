@@ -15,5 +15,5 @@ with:
 
 ``` r
 if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
-remotes::install_github("explodecomputer/genetics.binaRies")
+remotes::install_github("MRCIEU/genetics.binaRies")
 ```
