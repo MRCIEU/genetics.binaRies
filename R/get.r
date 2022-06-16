@@ -1,14 +1,11 @@
 # Prefix of URL where executables are available from
-# i.e. - once PR accepted they'll be on Gib's master branch,
-# - until PR accepted they are on PR branch of my fork
-# - include my fork master branch as a fall back
-urlprefix1 <- paste0("https://github.com/explodecomputer/genetics.binaRies/",
+# 
+# includes Gib master as a fall back
+urlprefix1 <- paste0("https://github.com/MRCIEU/genetics.binaRies/",
                      "raw/master/binaries/")
-urlprefix2 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
-                     "raw/cran-fixes-01-2022/binaries/")
-urlprefix3 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
+urlprefix2 <- paste0("https://github.com/explodecomputer/genetics.binaRies/",
                      "raw/master/binaries/")
-urlprefix <- list(urlprefix1, urlprefix2, urlprefix3)
+urlprefix <- list(urlprefix1, urlprefix2)
 
 # Function to test for a try() error
 # from http://adv-r.had.co.nz/Exceptions-Debugging.html
