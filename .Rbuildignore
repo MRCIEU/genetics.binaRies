@@ -4,3 +4,4 @@
 ^binaries$
 ^bin$
 ^\.github$
+^cran-comments\.md$
