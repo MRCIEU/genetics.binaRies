@@ -1,10 +1,10 @@
-### Test environments 
+### Test environments (tested on 21.06.2022)
 * local macOS install, R 4.2.0
 * macOS 11.5.2 |Mac mini|Apple M1 (on macOS builder ), R devel 4.2.0
 * Ubuntu Linux 20.04.1 LTS (on R-hub), R-release
 * Fedora Linux (on R-hub) R-devel
 * Windows (on R-hub and winbuilder) R devel and release
-(tested on 21.06.2022)
+
 
 ### R CMD CHECK
 There were no ERRORs or WARNINGs.
