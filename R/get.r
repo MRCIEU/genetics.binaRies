@@ -31,7 +31,7 @@ downloader <- function(exename) {
     }
   }
   #change permissions of binaries to be executable
-  Sys.chmod(destfile, "777")
+  Sys.chmod(destfile, "700")
   destfile
 }
 
