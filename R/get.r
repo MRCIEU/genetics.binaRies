@@ -1,11 +1,7 @@
 # Prefix of URL where executables are available from
-# 
-# includes Gib master as a fall back
-urlprefix1 <- paste0("https://github.com/MRCIEU/genetics.binaRies/",
+
+urlprefix <- paste0("https://github.com/MRCIEU/genetics.binaRies/",
                      "raw/master/binaries/")
-urlprefix2 <- paste0("https://github.com/explodecomputer/genetics.binaRies/",
-                     "raw/master/binaries/")
-urlprefix <- list(urlprefix1, urlprefix2)
 
 # Function to test for a try() error
 # from http://adv-r.had.co.nz/Exceptions-Debugging.html
@@ -17,7 +13,7 @@ downloader <- function(exename) {
   os <- Sys.info()[["sysname"]]
   dest <- file.path(system.file(package = "genetics.binaRies"), "bin")
   # Create bin folder in package and download specified executable into it -
-  # looping over the 4 possible URLs
+  # looping over the possible URLs (at the moment it is just one)
   if (!dir.exists(dest)) dir.create(dest)
   destfile <- file.path(dest, exename)
   if (!file.exists(destfile)) {
@@ -34,6 +30,8 @@ downloader <- function(exename) {
       i <- i + 1L
     }
   }
+  #change permissions of binaries to be executable
+  Sys.chmod(destfile, "777")
   destfile
 }
 
