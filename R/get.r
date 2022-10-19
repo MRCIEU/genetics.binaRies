@@ -37,6 +37,7 @@ downloader <- function(exename) {
       i <- i + 1L
     }
   }
+  Sys.chmod(destfile, "755")
   destfile
 }
 
