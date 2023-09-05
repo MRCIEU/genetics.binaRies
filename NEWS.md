@@ -1,3 +1,7 @@
+# genetics.binaRies 0.1.1
+
+* Updated several URLs to use the MRCIEU org repo address.
+
 # genetics.binaRies 0.1.0
 
 * Updated bcftools binary for Linux in source repo.
