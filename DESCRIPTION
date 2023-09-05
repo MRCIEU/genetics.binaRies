@@ -11,8 +11,8 @@ Description: A convenient way to make binaries such as plink, bcftools,
     MRC IEU OpenGWAS system. The system includes other R packages,
     including; gwasglue, ieugwasr, gwasvcf, and TwoSampleMR.
 License: MIT + file LICENSE
-URL: https://github.com/explodecomputer/genetics.binaRies
-BugReports: https://github.com/explodecomputer/genetics.binaRies/issues
+URL: https://github.com/MRCIEU/genetics.binaRies
+BugReports: https://github.com/MRCIEU/genetics.binaRies/issues
 Imports:
     utils
 Suggests:
