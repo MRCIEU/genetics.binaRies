@@ -17,7 +17,6 @@ urlprefix <- list(urlprefix0, urlprefix1, urlprefix2, urlprefix3)
 is.error <- function(x) inherits(x, "try-error")
 
 # Function to check for and download executables
-#' @importFrom utils download.file
 downloader <- function(exename) {
   os <- Sys.info()[["sysname"]]
   dest <- file.path(system.file(package = "genetics.binaRies"), "bin")
@@ -34,7 +33,7 @@ downloader <- function(exename) {
         stop(exename, " not found at all ", length(urlprefix), " URLs.")
       }
       fullurl <- paste0(urlprefix[[i]], os, "/", exename)
-      err <- try(download.file(url = fullurl, destfile = destfile))
+      err <- try(utils::download.file(url = fullurl, destfile = destfile))
       if (!is.error(err)) download_success <- TRUE
       i <- i + 1L
     }
