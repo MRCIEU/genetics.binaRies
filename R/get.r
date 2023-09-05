@@ -7,10 +7,8 @@ urlprefix0 <- paste0("https://github.com/MRCIEU/genetics.binaRies/",
 urlprefix1 <- paste0("https://github.com/explodecomputer/genetics.binaRies/",
                      "raw/master/binaries/")
 urlprefix2 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
-                     "raw/cran-fixes-01-2022/binaries/")
-urlprefix3 <- paste0("https://github.com/remlapmot/genetics.binaRies/",
                      "raw/master/binaries/")
-urlprefix <- list(urlprefix0, urlprefix1, urlprefix2, urlprefix3)
+urlprefix <- list(urlprefix0, urlprefix1, urlprefix2)
 
 # Function to test for a try() error
 # from http://adv-r.had.co.nz/Exceptions-Debugging.html
