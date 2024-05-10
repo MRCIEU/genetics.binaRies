@@ -2,15 +2,15 @@
 % Please edit documentation in R/get.r
 \name{get_bcftools_binary}
 \alias{get_bcftools_binary}
-\title{Find binary for bcftools}
+\title{Find binary for BCFtools}
 \usage{
 get_bcftools_binary()
 }
 \value{
-Path to bcftools
+Path to BCFtools
 }
 \description{
-Find binary for bcftools
+Find binary for BCFtools
 }
 \examples{
 if (Sys.info()[["sysname"]] != "Windows") get_bcftools_binary()

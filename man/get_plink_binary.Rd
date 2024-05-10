@@ -2,15 +2,15 @@
 % Please edit documentation in R/get.r
 \name{get_plink_binary}
 \alias{get_plink_binary}
-\title{Find binary for plink}
+\title{Find binary for PLINK}
 \usage{
 get_plink_binary()
 }
 \value{
-Path to plink
+Path to PLINK
 }
 \description{
-Find binary for plink
+Find binary for PLINK
 }
 \examples{
 get_plink_binary()

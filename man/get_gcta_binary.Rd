@@ -2,15 +2,15 @@
 % Please edit documentation in R/get.r
 \name{get_gcta_binary}
 \alias{get_gcta_binary}
-\title{Find binary for gcta}
+\title{Find binary for GCTA}
 \usage{
 get_gcta_binary()
 }
 \value{
-path to gcta
+path to GCTA
 }
 \description{
-Find binary for gcta
+Find binary for GCTA
 }
 \examples{
 get_gcta_binary()
