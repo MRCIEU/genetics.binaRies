@@ -2,3 +2,4 @@
 .RData
 .Rproj.user
 bin/
+.DS_Store
