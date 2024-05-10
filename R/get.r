@@ -40,12 +40,12 @@ downloader <- function(exename) {
   destfile
 }
 
-#' Find binary for bcftools
+#' Find binary for BCFtools
 #'
 #' @examples
 #' if (Sys.info()[["sysname"]] != "Windows") get_bcftools_binary()
 #' @export
-#' @return Path to bcftools
+#' @return Path to BCFtools
 get_bcftools_binary <- function()
 {
     switch(Sys.info()[['sysname']],
@@ -63,12 +63,12 @@ get_bcftools_binary <- function()
 }
 
 
-#' Find binary for plink
+#' Find binary for PLINK
 #'
 #' @examples
 #' get_plink_binary()
 #' @export
-#' @return Path to plink
+#' @return Path to PLINK
 get_plink_binary <- function()
 {
     switch(Sys.info()[['sysname']],
@@ -84,12 +84,12 @@ get_plink_binary <- function()
 }
 
 
-#' Find binary for gcta
+#' Find binary for GCTA
 #'
 #' @examples
 #' get_gcta_binary()
 #' @export
-#' @return path to gcta
+#' @return path to GCTA
 get_gcta_binary <- function()
 {
     switch(Sys.info()[['sysname']],
