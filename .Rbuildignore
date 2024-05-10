@@ -4,3 +4,8 @@
 ^binaries$
 ^bin$
 ^\.github$
+^\.gitignore$
+^\.Rhistory$
+^\.RData$
+^\.DS_Store$
+
