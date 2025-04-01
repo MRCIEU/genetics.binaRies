@@ -1,3 +1,7 @@
+# genetics.binaRies 0.1.2
+
+* Windows .exe binaries are now downloaded using the correct mode.
+
 # genetics.binaRies 0.1.1
 
 * Updated several URLs to use the MRCIEU org repo address.
