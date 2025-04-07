@@ -31,7 +31,7 @@ downloader <- function(exename) {
         stop(exename, " not found at all ", length(urlprefix), " URLs.")
       }
       fullurl <- paste0(urlprefix[[i]], os, "/", exename)
-      err <- try(utils::download.file(url = fullurl, destfile = destfile))
+      err <- try(utils::download.file(url = fullurl, destfile = destfile, mode = "wb"))
       if (!is.error(err)) download_success <- TRUE
       i <- i + 1L
     }
