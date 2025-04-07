@@ -2,6 +2,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/MRCIEU/genetics.binaRies/workflows/R-CMD-check/badge.svg)](https://github.com/MRCIEU/genetics.binaRies/actions)
+[![r-universe](https://mrcieu.r-universe.dev/badges/genetics.binaRies)](https://mrcieu.r-universe.dev/genetics.binaRies)
 <!-- badges: end -->
 
 The goal of genetics.binaRies is to provide a convenient way to make binaries 
