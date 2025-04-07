@@ -11,8 +11,13 @@ MRC IEU OpenGWAS system.
 
 ## Installation
 
-You can install the development version of **genetics.binaRies** from GitHub 
-with:
+You can install **genetics.binaRies** from either our r-universe
+
+```r
+install.packages("genetics.binaRies", repos = c("https://mrcieu.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+or GitHub with:
 
 ``` r
 if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
